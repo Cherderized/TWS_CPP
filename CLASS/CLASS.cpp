@@ -17,7 +17,8 @@
 
 // ===== CLASS ==============================================================
 #include "Form_Rectangle.h"
-
+#include "Form_Carre.h"
+#include "Form_Cercle.h"
 // Static function declarations
 // //////////////////////////////////////////////////////////////////////////
 
@@ -107,6 +108,8 @@ Form* CreateForm(const char* aName)
     Form* lResult = NULL;
 
     if (0 == _stricmp("Rectangle", aName)) { lResult = new Form_Rectangle(); }
+    else if (0 == _stricmp("Carre", aName)) { lResult = new Form_Carre(); }
+    else if (0 == _stricmp("Cercle", aName)) { lResult = new Form_Cercle (); }
 
     return lResult;
 }
